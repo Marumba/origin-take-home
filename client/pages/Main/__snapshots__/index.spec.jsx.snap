@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should render the main page 1`] = `
+.emotion-2 {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px;
+  -webkit-transition: padding 200ms ease-in;
+  transition: padding 200ms ease-in;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-2 {
+    padding: 24px;
+  }
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-6 {
+  display: block;
+  height: 24px;
+  -webkit-transition: height 200ms ease-in;
+  transition: height 200ms ease-in;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-6 {
+    height: 32px;
+  }
+}
+
+.emotion-8 {
+  display: block;
+  width: 100%;
+}
+
+.emotion-10 {
+  color: #1E2A32;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justtify-content: left;
+}
+
+.emotion-12 svg {
+  margin-right: 15px;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-16 {
+  display: block;
+}
+
+.emotion-18 {
+  display: block;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  data-testid="mainPage"
+>
+  <header
+    class="emotion-2 emotion-3"
+  >
+    <a
+      class="emotion-4 emotion-5"
+      href="/"
+      title="Origin Home"
+    >
+      <img
+        alt="Origin Logo"
+        class="emotion-6 emotion-7"
+        src="SvgrURL"
+      />
+    </a>
+  </header>
+  <main
+    class="emotion-8 emotion-9"
+  >
+    <h1
+      class="emotion-10 emotion-11"
+    >
+      Let's plan your 
+      <strong>
+        saving goal
+      </strong>
+    </h1>
+    <div
+      class="emotion-12 emotion-13"
+      data-testid="simulator-header"
+    >
+      <div
+        role="img"
+      />
+      <div
+        class="emotion-14 emotion-15"
+      >
+        <h2
+          class="emotion-16 emotion-17"
+        >
+          Buy a house
+        </h2>
+        <h3
+          class="emotion-18 emotion-19"
+        >
+          Saving goal
+        </h3>
+      </div>
+    </div>
+  </main>
+</div>
+`;

@@ -21,10 +21,16 @@ const typography = {
 	}
 };
 
-const media = {};
+const media = {
+	smallPhone: 'screen and (max-width : 480px)',
+	phone: 'screen and (max-width: 767px)',
+	tablet: 'screen and (min-width: 768px) and (max-width: 991px)',
+	regularMobile: 'screen and (min-width : 480px) and (max-width: 991px)',
+	mobile: 'screen and (max-width: 991px)',
+	desktop: 'screen and (min-width: 992px)'
+};
 
 const color = {
-	bgGray: '#E5E5E5',
 	blueGray100: '#CBD5DC',
 	blueGray10: '#F4F8FA',
 	blueGray300: '#8A9CA9',
@@ -35,6 +41,7 @@ const color = {
 	brandColorPrimary: '#1B31A8',
 	brandColorSecondary: '#0079FF',
 	hr: '#F4F8FA',
+	htmlBackground: '#E5E5E5',
 	neutralWhite: '#FFFFFF',
 	primaryText: '#708797'
 };

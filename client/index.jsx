@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider, Global } from '@emotion/react';
-
-import theme, { globalStyle } from '~/themes';
-
-import Main from './Main';
+import App from './App';
 
 ReactDOM.render(
-	<ThemeProvider theme={theme}>
-		<Global styles={currentTheme => globalStyle(currentTheme)} />
-		<Main />
-	</ThemeProvider>,
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
 	document.getElementById('app')
 );

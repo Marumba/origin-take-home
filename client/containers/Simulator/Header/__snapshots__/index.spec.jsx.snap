@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Simulator Header should display all 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justtify-content: left;
+}
+
+.emotion-0 svg {
+  margin-right: 15px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  display: block;
+}
+
+.emotion-6 {
+  display: block;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  data-testid="simulator-header"
+>
+  <div
+    role="img"
+  />
+  <div
+    class="emotion-2 emotion-3"
+  >
+    <h2
+      class="emotion-4 emotion-5"
+    >
+      Title
+    </h2>
+    <h3
+      class="emotion-6 emotion-7"
+    >
+      Subtitle
+    </h3>
+  </div>
+</div>
+`;

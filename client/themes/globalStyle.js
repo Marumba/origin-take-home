@@ -7,6 +7,19 @@ const bodyStyles = theme => css`
 	-webkit-tap-highlight-color: transparent;
 	-webkit-overflow-scrolling: touch;
 
+	*,
+	*::after,
+	*::before {
+		box-sizing: border-box;
+		box-sizing: inherit;
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: none;
+	}
+
+	background: ${theme.color.htmlBackground};
+
 	font-family: ${theme.typography.family.primary};
 	font-size: 10px;
 	color: ${theme.color.primaryText};
@@ -108,17 +121,6 @@ const bodyStyles = theme => css`
 
 export const globalStyle = theme => css`
 	@import url(${theme.typography.url});
-
-	*,
-	*::after,
-	*::before {
-		box-sizing: border-box;
-		box-sizing: inherit;
-		margin: 0;
-		padding: 0;
-		border: none;
-		outline: none;
-	}
 
 	body {
 		${bodyStyles(theme)}

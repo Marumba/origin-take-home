@@ -5,7 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	devtool: 'cheap-module-source-map',
+	devtool: 'eval-cheap-module-source-map',
 	mode: 'development',
 	modules: {
 		rules: [
@@ -16,7 +16,7 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						options: {
-							configFile: path.resolve(__dirname, 'babel.config.dev.js'),
+							configFile: path.resolve(__dirname, '../babel', 'babel.dev.js'),
 							plugins: ['react-refresh/babel']
 						}
 					}
@@ -27,7 +27,8 @@ module.exports = {
 	output: {
 		filename: 'origin.[name].js',
 		chunkFilename: 'origin.[name].chunk.js',
-		path: path.resolve(__dirname, '../public'),
+		pathinfo: true,
+		devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
 		publicPath: '/'
 	},
 	plugins: [

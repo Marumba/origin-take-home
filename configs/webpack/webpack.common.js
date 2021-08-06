@@ -2,13 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
+const rootDir = '../../';
+
 module.exports = options => {
 	return {
 		devtool: options.devtool,
 		devServer: options.devServer,
 		mode: options.mode,
 		entry: {
-			bundle: path.resolve(__dirname, '../client', 'index'),
+			bundle: path.resolve(__dirname, rootDir, 'client', 'index'),
 			...options.entry
 		},
 		module: {
@@ -77,7 +79,7 @@ module.exports = options => {
 		resolve: {
 			extensions: ['.js', '.jsx'],
 			alias: {
-				'~': path.resolve(__dirname, '../client')
+				'~': path.resolve(__dirname, rootDir, 'client')
 			}
 		},
 		plugins: [
@@ -85,7 +87,7 @@ module.exports = options => {
 			new HtmlWebpackPlugin({
 				favicon: './public/favicon.png',
 				filename: 'index.html',
-				template: path.resolve(__dirname, '../client', 'template.ejs'),
+				template: path.resolve(__dirname, rootDir, 'client', 'template.ejs')
 			}),
 			...options.plugins
 		],

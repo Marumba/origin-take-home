@@ -50,6 +50,7 @@ export default theme => ({
 		font-size: 24px;
 		line-height: 120%;
 	`,
+	pageContainer: css``,
 	paragraph: css`
 		font-family: ${theme.typography.primary};
 		font-weight: ${theme.typography.weight.primary.regular};

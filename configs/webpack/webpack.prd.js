@@ -12,7 +12,7 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						options: {
-							configFile: path.resolve(__dirname, 'babel.config.js')
+							configFile: path.resolve(__dirname, '../babel', 'babel.prd.js')
 						}
 					}
 				]
@@ -22,7 +22,7 @@ module.exports = {
 	output: {
 		filename: 'assets/js/origin.[name].[contenthash].js',
 		chunkFilename: 'assets/js/origin.[name].[id].[contenthash].js',
-		path: path.resolve(__dirname, '../dist'),
+		path: path.resolve(__dirname, '../../dist'),
 		clean: true
 	},
 	optimization: {
