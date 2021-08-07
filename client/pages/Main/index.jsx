@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Header } from '~/components';
 import { Simulator } from '~/containers';
 
-import { ReactComponent as House } from '~/assets/imgs/icons/icon-home.svg';
+import { Icons } from '~/helpers/icons';
 
 import * as S from './style';
 
@@ -12,10 +12,13 @@ function Main() {
 		<S.MainContainer data-testid="mainPage">
 			<Header />
 			<Container as="main">
-				<S.MainTitle>
-					Let&apos;s plan your <strong>saving goal</strong>
+				<S.MainTitle className="highEmphasis">
+					Let&apos;s plan your <strong>saving goal</strong>.
 				</S.MainTitle>
-				<Simulator.Header title="Buy a house" subtitle="Saving goal" SvgComponent={House} />
+				<Simulator.Header title="Buy a house" subtitle="Saving goal" SvgComponent={Icons.Home} />
+				<Simulator.Amount label="Total amount" />
+				<Simulator.Result title="Monthly amount" />
+				<Simulator.ResultExplained />
 			</Container>
 		</S.MainContainer>
 	);

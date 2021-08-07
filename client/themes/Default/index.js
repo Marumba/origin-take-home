@@ -1,16 +1,16 @@
-import mixins from './mixins';
-
 const typography = {
-	family: {
+	families: {
 		primary: "'Work Sans', sans-serif;",
 		secondary: "'Rubik', sans-serif;"
 	},
-	size: {
+	sizes: {
 		lg: '24px',
 		xs: '20px'
 	},
-	url: 'https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Work+Sans:wght@400;600&display=swap',
-	weight: {
+	urls: [
+		'https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Work+Sans:wght@400;600&display=swap'
+	],
+	weights: {
 		primary: {
 			regular: 400,
 			semibold: 600
@@ -21,7 +21,7 @@ const typography = {
 	}
 };
 
-const media = {
+const medias = {
 	smallPhone: 'screen and (max-width : 480px)',
 	phone: 'screen and (max-width: 767px)',
 	tablet: 'screen and (min-width: 768px) and (max-width: 991px)',
@@ -30,7 +30,7 @@ const media = {
 	desktop: 'screen and (min-width: 992px)'
 };
 
-const color = {
+const colors = {
 	blueGray100: '#CBD5DC',
 	blueGray10: '#F4F8FA',
 	blueGray300: '#8A9CA9',
@@ -48,8 +48,7 @@ const color = {
 
 export default {
 	name: 'Default',
-	color,
-	media,
-	mixins: mixins({ color, typography, media }),
+	colors,
+	medias,
 	typography
 };

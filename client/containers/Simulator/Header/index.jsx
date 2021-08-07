@@ -3,28 +3,30 @@ import PropTypes from 'prop-types';
 
 import * as S from './style';
 
-function Header({ title, subtitle, SvgComponent }) {
+function Header({ customCss, subtitle, SvgComponent, title }) {
 	return (
-		<S.Header data-testid="simulator-header">
+		<S.Header data-testid="simulator-header" customCss={customCss}>
 			{SvgComponent && <SvgComponent role="img" />}
 			<S.TextWrapper>
-				<S.Title>{title}</S.Title>
-				<S.Subtitle>{subtitle}</S.Subtitle>
+				<S.Title className="highEmphasis">{title}</S.Title>
+				<S.Subtitle className="lowEmphasis">{subtitle}</S.Subtitle>
 			</S.TextWrapper>
 		</S.Header>
 	);
 }
 
 Header.propTypes = {
-	title: PropTypes.string,
+	customCss: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ styles: PropTypes.string })]),
 	subtitle: PropTypes.string,
-	SvgComponent: PropTypes.oneOfType([PropTypes.shape({ type: PropTypes.func }), PropTypes.elementType])
+	SvgComponent: PropTypes.oneOfType([PropTypes.shape({ type: PropTypes.func }), PropTypes.elementType]),
+	title: PropTypes.string
 };
 
 Header.defaultProps = {
-	title: '',
+	customCss: undefined,
 	subtitle: '',
-	SvgComponent: undefined
+	SvgComponent: undefined,
+	title: ''
 };
 
 export default Header;

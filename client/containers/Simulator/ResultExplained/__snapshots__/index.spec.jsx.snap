@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Simulator ResultExplained should render without any props given 1`] = `
+.emotion-0 {
+  padding: 24px;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  background: #F4F8FA;
+}
+
+.emotion-0.highEmphasis {
+  color: #1E2A32;
+}
+
+.emotion-0 strong {
+  font-weight: 600;
+}
+
+<p
+  class="emotion-0 emotion-1"
+  data-testid="simulator-result-explained"
+>
+  Testing the text 
+  <strong>
+    amount
+  </strong>
+   an the line height
+</p>
+`;

@@ -8,6 +8,8 @@ export const Header = styled.div`
 	svg {
 		margin-right: 15px;
 	}
+
+	${({ customCss, theme }) => (typeof customCss === 'function' ? customCss(theme) : customCss)}
 `;
 
 export const TextWrapper = styled.div`
@@ -17,6 +19,8 @@ export const TextWrapper = styled.div`
 	flex-direction: column;
 `;
 export const Title = styled.h2`
+	${({ theme }) => theme.mixins.headingSmall};
+
 	display: block;
 `;
 export const Subtitle = styled.h3`

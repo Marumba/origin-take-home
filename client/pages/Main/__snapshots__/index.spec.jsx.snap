@@ -50,10 +50,26 @@ exports[`Main should render the main page 1`] = `
 
 .emotion-10 {
   color: #1E2A32;
+  font-family: 'Work Sans',sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 120%;
   text-align: center;
+  margin: 32px 0 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-10 {
+    font-size: 20px;
+  }
+}
+
+.emotion-10 strong {
+  font-weight: 600;
+}
+
+.emotion-10.highEmphasis {
+  color: #1B31A8;
 }
 
 .emotion-12 {
@@ -91,11 +107,159 @@ exports[`Main should render the main page 1`] = `
 }
 
 .emotion-16 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
   display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-16 {
+    font-size: 24px;
+  }
+}
+
+.emotion-16.highEmphasis {
+  color: #1E2A32;
 }
 
 .emotion-18 {
   display: block;
+}
+
+.emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-24 {
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #1E2A32;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-24 {
+    font-size: 14px;
+  }
+}
+
+.emotion-26 {
+  border: 1px solid #E9EEF2;
+  border-radius: 4px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-26 svg {
+  padding-left: 13px;
+}
+
+.emotion-28 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #4D6475;
+  padding: 14px 7px;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-28 {
+    font-size: 24px;
+  }
+}
+
+.emotion-28.highEmphasis {
+  color: #1E2A32;
+}
+
+.emotion-30 {
+  padding: 24px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-32 {
+  color: #1E2A32;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  text-align: left;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-32 {
+    font-size: 20px;
+  }
+}
+
+.emotion-32 strong {
+  font-weight: 600;
+}
+
+.emotion-32.highEmphasis {
+  color: #1B31A8;
+}
+
+.emotion-34 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-34.highEmphasis {
+  color: #0079FF;
+}
+
+.emotion-36 {
+  padding: 24px;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  background: #F4F8FA;
+}
+
+.emotion-36.highEmphasis {
+  color: #1E2A32;
+}
+
+.emotion-36 strong {
+  font-weight: 600;
 }
 
 <div
@@ -121,12 +285,13 @@ exports[`Main should render the main page 1`] = `
     class="emotion-8 emotion-9"
   >
     <h1
-      class="emotion-10 emotion-11"
+      class="highEmphasis emotion-10 emotion-11"
     >
       Let's plan your 
       <strong>
         saving goal
       </strong>
+      .
     </h1>
     <div
       class="emotion-12 emotion-13"
@@ -139,17 +304,72 @@ exports[`Main should render the main page 1`] = `
         class="emotion-14 emotion-15"
       >
         <h2
-          class="emotion-16 emotion-17"
+          class="highEmphasis emotion-16 emotion-17"
         >
           Buy a house
         </h2>
         <h3
-          class="emotion-18 emotion-19"
+          class="lowEmphasis emotion-18 emotion-19"
         >
           Saving goal
         </h3>
       </div>
     </div>
+    <div
+      class="emotion-20 emotion-21"
+      data-testid="simulator-amount"
+    >
+      <div
+        class="emotion-22 emotion-23"
+      >
+        <label
+          class="emotion-24 emotion-25"
+          for="amount"
+        >
+          Total amount
+        </label>
+        <div
+          class="emotion-26 emotion-27"
+        >
+          <div
+            role="img"
+          />
+          <input
+            class="emotion-28 emotion-29"
+            id="amount"
+            name="amount"
+            type="text"
+            value="0.00"
+          />
+        </div>
+      </div>
+      ;
+    </div>
+    <div
+      class="emotion-30 emotion-31"
+      data-testid="simulator-result"
+    >
+      <div
+        class="emotion-32 emotion-33"
+      >
+        Monthly amount
+      </div>
+      <div
+        class="highEmphasis emotion-34 emotion-35"
+      >
+        123213
+      </div>
+    </div>
+    <p
+      class="emotion-36 emotion-37"
+      data-testid="simulator-result-explained"
+    >
+      Testing the text 
+      <strong>
+        amount
+      </strong>
+       an the line height
+    </p>
   </main>
 </div>
 `;

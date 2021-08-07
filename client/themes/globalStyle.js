@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-nested-template-literals */
 import { css } from '@emotion/react';
 
 const bodyStyles = theme => css`
@@ -18,11 +19,11 @@ const bodyStyles = theme => css`
 		outline: none;
 	}
 
-	background: ${theme.color.htmlBackground};
+	background: ${theme.colors.htmlBackground};
 
-	font-family: ${theme.typography.family.primary};
+	font-family: ${theme.typography.families.primary};
 	font-size: 10px;
-	color: ${theme.color.primaryText};
+	color: ${theme.colors.primaryText};
 
 	margin: 0;
 	padding: 0;
@@ -51,7 +52,7 @@ const bodyStyles = theme => css`
 	input,
 	textarea,
 	select {
-		font-family: ${theme.typography.family.primary};
+		font-family: ${theme.typography.families.primary};
 		background: none;
 	}
 
@@ -84,24 +85,6 @@ const bodyStyles = theme => css`
 		color: inherit;
 	}
 
-	ul,
-	ol {
-		list-style: none outside none;
-	}
-
-	sub,
-	sup {
-		font-size: 0.8em;
-	}
-
-	sub {
-		bottom: -0.2em;
-	}
-
-	sup {
-		top: -0.2em;
-	}
-
 	b,
 	em {
 		font-weight: bold;
@@ -109,7 +92,7 @@ const bodyStyles = theme => css`
 
 	hr {
 		border: none;
-		border-top: 1px solid ${theme.color.hr};
+		border-top: 1px solid ${theme.colors.hr};
 		clear: both;
 		margin-bottom: 1.25rem;
 	}
@@ -120,7 +103,7 @@ const bodyStyles = theme => css`
 `;
 
 export const globalStyle = theme => css`
-	@import url(${theme.typography.url});
+	${theme.typography.urls.map(url => `@import url(${url});`)}
 
 	body {
 		${bodyStyles(theme)}

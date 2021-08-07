@@ -6,4 +6,6 @@ export const MainContainer = styled.div`
 
 export const MainTitle = styled.h1`
 	${({ theme }) => theme.mixins.subtitle}
+
+	margin: 32px 0 24px;
 `;

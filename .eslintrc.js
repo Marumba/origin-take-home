@@ -1,7 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-const prettierOptions = JSON.parse(fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'));
 const error = 2;
 const warn = 1;
 const ignore = 0;
@@ -32,14 +28,13 @@ module.exports = {
 		importresolver: {
 			node: {},
 			webpack: {
-				config: 'webpack.development.config.js',
+				config: 'configs/webpack/webpack.dev.js',
 				env: 'development'
 			}
 		}
 	},
 	rules: {
-		'prettier/prettier': [error, prettierOptions],
-		'arrow-body-style': ignore,
+		'prettier/prettier': error,
 		'arrow-parens': [warn, 'as-needed'],
 		'comma-dangle': [error, 'never'],
 		'import/extensions': ignore,
@@ -49,15 +44,12 @@ module.exports = {
 		'import/no-useless-path-segments': ignore,
 		'import/prefer-default-export': ignore,
 		'import/no-extraneous-dependencies': ignore,
-		indent: ignore,
 		'jsx-a11y/click-events-have-key-events': ignore,
 		'linebreak-style': [error, 'windows'],
-		'max-len': ignore,
 		'no-param-reassign': [error, { props: false }],
 		'no-plusplus': ignore,
 		'no-nested-ternary': ignore,
 		'no-restricted-globals': [error, 'event', 'fdescribe'],
-		'no-tabs': ignore,
 		'no-use-before-define': [error, { functions: true, classes: true, variables: false }],
 		'object-curly-newline': [error, { consistent: true }],
 		'react/destructuring-assignment': [warn, 'always'],

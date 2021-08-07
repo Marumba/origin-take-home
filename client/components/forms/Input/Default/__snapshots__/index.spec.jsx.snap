@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Text should render with the required prop values 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-2 {
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #1E2A32;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-2 {
+    font-size: 14px;
+  }
+}
+
+.emotion-4 {
+  border: 1px solid #E9EEF2;
+  border-radius: 4px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 svg {
+  padding-left: 13px;
+}
+
+.emotion-6 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #4D6475;
+  padding: 14px 7px;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-6 {
+    font-size: 24px;
+  }
+}
+
+.emotion-6.highEmphasis {
+  color: #1E2A32;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <label
+    class="emotion-2 emotion-3"
+    for="ad"
+  >
+    test
+  </label>
+  <div
+    class="emotion-4 emotion-5"
+  >
+    <input
+      class="emotion-6 emotion-7"
+      id="ad"
+      name="test"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

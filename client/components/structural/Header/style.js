@@ -14,7 +14,7 @@ export const Header = styled.header`
 
 	transition: padding ${transitionTime} ease-in;
 
-	@media ${({ theme }) => theme.media.desktop} {
+	@media ${({ theme }) => theme.medias.desktop} {
 		padding: 24px;
 	}
 `;
@@ -24,7 +24,7 @@ export const originLogo = theme => css`
 
 	transition: height ${transitionTime} ease-in;
 
-	@media ${theme.media.desktop} {
+	@media ${theme.medias.desktop} {
 		height: 32px;
 	}
 `;

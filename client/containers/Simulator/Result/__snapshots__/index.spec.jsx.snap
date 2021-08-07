@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Simulator Result should render without any props given 1`] = `
+.emotion-0 {
+  padding: 24px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: right;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-2.highEmphasis {
+  color: #0079FF;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  data-testid="simulator-result"
+>
+  <div
+    class="highEmphasis emotion-2 emotion-3"
+  >
+    123213
+  </div>
+</div>
+`;

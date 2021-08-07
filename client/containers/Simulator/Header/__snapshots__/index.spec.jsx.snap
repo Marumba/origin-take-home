@@ -36,7 +36,21 @@ exports[`Container Simulator Header should display all 1`] = `
 }
 
 .emotion-4 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
   display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-4 {
+    font-size: 24px;
+  }
+}
+
+.emotion-4.highEmphasis {
+  color: #1E2A32;
 }
 
 .emotion-6 {
@@ -54,12 +68,12 @@ exports[`Container Simulator Header should display all 1`] = `
     class="emotion-2 emotion-3"
   >
     <h2
-      class="emotion-4 emotion-5"
+      class="highEmphasis emotion-4 emotion-5"
     >
       Title
     </h2>
     <h3
-      class="emotion-6 emotion-7"
+      class="lowEmphasis emotion-6 emotion-7"
     >
       Subtitle
     </h3>

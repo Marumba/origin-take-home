@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Simulator Amount should render without any props given 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #1E2A32;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-4 {
+    font-size: 14px;
+  }
+}
+
+.emotion-6 {
+  border: 1px solid #E9EEF2;
+  border-radius: 4px;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 svg {
+  padding-left: 13px;
+}
+
+.emotion-8 {
+  font-family: 'Rubik',sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #4D6475;
+  padding: 14px 7px;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-8 {
+    font-size: 24px;
+  }
+}
+
+.emotion-8.highEmphasis {
+  color: #1E2A32;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  data-testid="simulator-amount"
+>
+  <div
+    class="emotion-2 emotion-3"
+  >
+    <label
+      class="emotion-4 emotion-5"
+      for="amount"
+    />
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <div
+        role="img"
+      />
+      <input
+        class="emotion-8 emotion-9"
+        id="amount"
+        name="amount"
+        type="text"
+        value="0.00"
+      />
+    </div>
+  </div>
+  ;
+</div>
+`;
