@@ -31,6 +31,8 @@ const defaultProps = {
 	value: 0
 };
 
+const ERASER_STRING = '-';
+
 const InputCurrency = React.forwardRef(
 	(
 		{
@@ -69,7 +71,7 @@ const InputCurrency = React.forwardRef(
 					locale,
 					options: { maximumFractionDigits, minimumFractionDigits }
 				} = finalConfig;
-				const normalizedValue = fractionateValue(inputValue, maximumFractionDigits, '-');
+				const normalizedValue = fractionateValue(inputValue, maximumFractionDigits, ERASER_STRING);
 				const normalizecMaskedValue = formatCurrency(normalizedValue, locale, {
 					maximumFractionDigits,
 					minimumFractionDigits
@@ -104,10 +106,7 @@ const InputCurrency = React.forwardRef(
 		const handleBlur = useCallback(
 			event => {
 				const [newValue, newMaskedValue] = updateValues(event.target.value);
-
-				if (newMaskedValue) {
-					onBlur(event, newValue, newMaskedValue);
-				}
+				onBlur(event, newValue, newMaskedValue);
 			},
 			[updateValues, onBlur]
 		);
@@ -115,10 +114,7 @@ const InputCurrency = React.forwardRef(
 		const handleFocus = useCallback(
 			event => {
 				const [newValue, newMaskedValue] = updateValues(event.target.value);
-
-				if (newMaskedValue) {
-					onFocus(event, newValue, newMaskedValue);
-				}
+				onFocus(event, newValue, newMaskedValue);
 			},
 			[onFocus, updateValues]
 		);
@@ -127,10 +123,7 @@ const InputCurrency = React.forwardRef(
 			event => {
 				event.preventDefault();
 				const [newValue, newMaskedValue] = updateValues(event.target.value);
-
-				if (newMaskedValue) {
-					onChange(event, newValue, newMaskedValue);
-				}
+				onChange(event, newValue, newMaskedValue);
 			},
 			[onChange, updateValues]
 		);

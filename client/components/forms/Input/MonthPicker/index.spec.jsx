@@ -70,7 +70,7 @@ describe('Input Month Picker', () => {
 			render(<InputMonthPicker id="testeId" name="testeId" onChange={onChangeMock} />);
 			const [leftArrow, rightArrow] = screen.getAllByRole('button');
 
-			userEvent.tab();
+			leftArrow.focus();
 			expect(leftArrow).toHaveFocus();
 
 			userEvent.tab();
@@ -92,6 +92,4 @@ describe('Input Month Picker', () => {
 			expect(leftArrow).toHaveStyleRule('transform', 'scale(1.4)', { target: 'svg' });
 		});
 	});
-
-	// describe('')
 });

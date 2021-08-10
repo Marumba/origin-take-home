@@ -49,27 +49,52 @@ describe('Input Text', () => {
 		expect(screen.getByDisplayValue(defaultPropValueFormatted)).toBeInTheDocument();
 
 		userEvent.type(screen.getByDisplayValue(defaultPropValueFormatted), '-');
-		expect(screen.getByRole('textbox')).toBeInTheDocument();
+		expect(screen.getByDisplayValue('0.00')).toBeInTheDocument();
 	});
 
-	it('should use blur and focus status if available', () => {
+	it('should return value to onChange if a function were given', () => {
+		const mockOnChange = jest.fn();
+		render(<InputCurrency id="needed" name="needed" onChange={mockOnChange} />);
+
+		userEvent.type(screen.getByRole('textbox'), '123');
+		expect(mockOnChange).toHaveBeenNthCalledWith(
+			1,
+			expect.objectContaining({ _reactName: 'onChange' }),
+			0.01,
+			'0.01'
+		);
+		expect(mockOnChange).toHaveBeenNthCalledWith(
+			2,
+			expect.objectContaining({ _reactName: 'onChange' }),
+			0.12,
+			'0.12'
+		);
+		expect(mockOnChange).toHaveBeenNthCalledWith(
+			3,
+			expect.objectContaining({ _reactName: 'onChange' }),
+			1.23,
+			'1.23'
+		);
+	});
+
+	it('should update values when blur or focus status handle were given', () => {
+		expect(InputCurrency.defaultProps.onBlur).toBeDefined();
+		const resultBlur = InputCurrency.defaultProps.onBlur('test blur');
+		expect(resultBlur).toBe('test blur');
+
+		expect(InputCurrency.defaultProps.onFocus).toBeDefined();
+		const resultFocus = InputCurrency.defaultProps.onFocus('test focus');
+		expect(resultFocus).toBe('test focus');
+
 		const mockOnBlur = jest.fn();
 		const mockOnFocus = jest.fn();
-		render(
-			<InputCurrency
-				id="needed"
-				name="needed"
-				onBlur={mockOnBlur}
-				onFocus={mockOnFocus}
-				defaultValue={defaultPropValue}
-			/>
-		);
+		render(<InputCurrency id="needed" name="needed" onBlur={mockOnBlur} onFocus={mockOnFocus} />);
 
-		userEvent.tab();
-		expect(screen.getByRole('textbox')).toHaveFocus();
 		userEvent.type(screen.getByRole('textbox'), '123');
-		expect(mockOnFocus).toHaveBeenCalled();
+		expect(screen.getByDisplayValue('1.23')).toBeInTheDocument();
+		expect(mockOnFocus).toHaveBeenCalledWith(expect.objectContaining({ _reactName: 'onFocus' }), 0, '0.00');
+
 		userEvent.click(document.body);
-		expect(mockOnBlur).toHaveBeenCalled();
+		expect(mockOnBlur).toHaveBeenCalledWith(expect.objectContaining({ _reactName: 'onBlur' }), 1.23, '1.23');
 	});
 });
