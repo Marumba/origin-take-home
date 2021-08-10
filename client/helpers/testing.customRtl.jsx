@@ -1,16 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { RecoilRoot } from 'recoil';
 import { render as rtlRender } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
+import { childrenType } from '~/types';
 
 import theme from '~/themes';
 
 function render(ui, { ...renderOptions } = {}) {
 	function Wrapper({ children }) {
-		return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+		return (
+			<RecoilRoot>
+				<ThemeProvider theme={theme}>{children}</ThemeProvider>
+			</RecoilRoot>
+		);
 	}
 	Wrapper.propTypes = {
-		children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired
+		children: childrenType.isRequired
 	};
 	return rtlRender(ui, { wrapper: Wrapper, ...renderOptions });
 }

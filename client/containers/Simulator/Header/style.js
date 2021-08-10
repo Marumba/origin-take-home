@@ -24,5 +24,7 @@ export const Title = styled.h2`
 	display: block;
 `;
 export const Subtitle = styled.h3`
+	${({ theme }) => theme.mixins.paragraph};
+
 	display: block;
 `;

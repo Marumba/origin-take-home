@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import PropTypes from 'prop-types';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { string, func, stringOrNumber } from '~/types';
 
 import { fractionateValue, formatCurrency } from '~/helpers/utils';
 import { CURRENCY_CONFIG } from '~/helpers/constants';
@@ -8,41 +8,67 @@ import { CurrencyIcons } from '~/helpers/icons';
 import InputDefault from '../Default';
 
 const propTypes = {
-	currency: PropTypes.string,
-	defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-	onBlur: PropTypes.func,
-	onChange: PropTypes.func,
-	onFocus: PropTypes.func,
-	onKeyPress: PropTypes.func,
-	maxDecimalPlaces: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-	value: PropTypes.number
+	currency: string,
+	defaultValue: stringOrNumber,
+	maxDecimalPlaces: stringOrNumber,
+	maxFractionDigits: stringOrNumber,
+	onBlur: func,
+	onChange: func,
+	onFocus: func,
+	onKeyPress: func,
+	value: stringOrNumber
 };
 
 const defaultProps = {
 	currency: 'USD',
 	defaultValue: undefined,
-	onBlur: () => null,
-	onChange: () => null,
-	onFocus: () => null,
-	onKeyPress: () => null,
-	maxDecimalPlaces: 9,
+	maxDecimalPlaces: 11,
+	maxFractionDigits: undefined,
+	onBlur: f => f,
+	onChange: f => f,
+	onFocus: f => f,
+	onKeyPress: f => f,
 	value: 0
 };
 
 const InputCurrency = React.forwardRef(
 	(
-		{ currency, defaultValue, onBlur, onChange, onFocus, onKeyPress, maxDecimalPlaces, value, ...inputProps },
+		{
+			currency,
+			defaultValue,
+			onBlur,
+			onChange,
+			onFocus,
+			onKeyPress,
+			maxDecimalPlaces,
+			maxFractionDigits,
+			value,
+			...inputProps
+		},
 		ref
 	) => {
 		const [maskedValue, setMaskedValue] = useState('0');
-		const [config] = useState(CURRENCY_CONFIG[currency]);
+
+		const finalConfig = useMemo(() => {
+			const {
+				options: { minimumFractionDigits, maximumFractionDigits }
+			} = CURRENCY_CONFIG[currency];
+			return {
+				...CURRENCY_CONFIG[currency],
+				options: {
+					...CURRENCY_CONFIG[currency].options,
+					minimumFractionDigits: maxFractionDigits >= 0 ? maxFractionDigits : minimumFractionDigits,
+					maximumFractionDigits: maxFractionDigits >= 0 ? maxFractionDigits : maximumFractionDigits
+				}
+			};
+		}, [currency, maxFractionDigits]);
 
 		const calculateValues = useCallback(
 			inputValue => {
 				const {
 					locale,
 					options: { maximumFractionDigits, minimumFractionDigits }
-				} = config;
+				} = finalConfig;
 				const normalizedValue = fractionateValue(inputValue, maximumFractionDigits);
 				const normalizecMaskedValue = formatCurrency(normalizedValue, locale, {
 					maximumFractionDigits,
@@ -50,7 +76,7 @@ const InputCurrency = React.forwardRef(
 				});
 				return [normalizedValue, normalizecMaskedValue];
 			},
-			[config]
+			[finalConfig]
 		);
 
 		const popFirstKeepLastNum = useCallback(
@@ -116,18 +142,18 @@ const InputCurrency = React.forwardRef(
 			const [, finalMaskedValue] = calculateValues(currentValue);
 
 			setMaskedValue(finalMaskedValue);
-		}, [value, defaultValue, config, calculateValues]);
+		}, [value, defaultValue, calculateValues]);
 
 		return (
 			<InputDefault
-				{...inputProps}
 				onBlur={handleBlur}
 				onFocus={handleFocus}
 				onChange={handleChange}
 				onKeyUp={handleKeyUp}
 				ref={ref}
-				SvgComponent={CurrencyIcons[currency]}
+				prepend={React.createElement(CurrencyIcons[currency])}
 				value={maskedValue}
+				{...inputProps}
 			/>
 		);
 	}

@@ -1,20 +1,37 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useRecoilValue } from 'recoil';
+import { string, customCssType } from '~/types';
+
+import { formatCurrency } from '~/helpers/utils';
+import { CURRENCY_CONFIG } from '~/helpers/constants';
+
+import { amountState } from '../Amount';
+import { reachDateState } from '../ReachDate';
 
 import * as S from './style';
 
 function Result({ title, customCss }) {
+	const amount = useRecoilValue(amountState);
+	const reachData = useRecoilValue(reachDateState);
+
+	const monthlyAmount = amount.value / reachData.months || 0;
+	const monthlyAmountFormatted = formatCurrency(
+		monthlyAmount,
+		CURRENCY_CONFIG.USD.locale,
+		CURRENCY_CONFIG.USD.options
+	).replace('.00', '');
+
 	return (
 		<S.Result data-testid="simulator-result" customCss={customCss}>
 			{title && <S.Title>{title}</S.Title>}
-			<S.ResultValue className="highEmphasis">123213</S.ResultValue>
+			<S.ResultValue className="highEmphasis">{monthlyAmountFormatted}</S.ResultValue>
 		</S.Result>
 	);
 }
 
 Result.propTypes = {
-	customCss: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ styles: PropTypes.string })]),
-	title: PropTypes.string
+	customCss: customCssType,
+	title: string
 };
 
 Result.defaultProps = {

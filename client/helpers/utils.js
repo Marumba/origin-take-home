@@ -27,3 +27,14 @@ export function fractionateValue(value, maximumFractionDigits) {
 
 	return sanitizeNumber(saferValue) / fractionReason;
 }
+
+export function getYearMonthDatetime(date = new Date()) {
+	if (typeof date?.getMonth !== 'function') return false;
+	const month = date.getMonth() + 1;
+	const year = date.getFullYear();
+	return {
+		month,
+		year,
+		datetime: new Date(`${year}/${month}/01`).getTime()
+	};
+}

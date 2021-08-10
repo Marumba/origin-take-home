@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-const transitionTime = '200ms';
-
 export const Header = styled.header`
 	background: #fff;
 
@@ -12,7 +10,7 @@ export const Header = styled.header`
 
 	padding: 12px;
 
-	transition: padding ${transitionTime} ease-in;
+	transition: padding ${({ theme }) => theme.animations.durations.fastest} ease-in;
 
 	@media ${({ theme }) => theme.medias.desktop} {
 		padding: 24px;
@@ -22,7 +20,7 @@ export const Header = styled.header`
 export const originLogo = theme => css`
 	height: 24px;
 
-	transition: height ${transitionTime} ease-in;
+	transition: height ${theme.animations.durations.fastest} ease-in;
 
 	@media ${theme.medias.desktop} {
 		height: 32px;

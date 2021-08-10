@@ -1,15 +1,32 @@
 import React, { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import { bool, oneOfType, element, string, func, childrenType, customCssType } from '~/types';
 
 import * as S from './style';
 
 const InputDefault = forwardRef(
-	({ customCss, id, label, name, onChange, SvgComponent, type, value, ...inputProps }, ref) => {
+	(
+		{
+			append,
+			children,
+			customCss,
+			id,
+			fakeInput,
+			label,
+			name,
+			onChange,
+			prepend,
+			type,
+			value,
+			...inputProps
+		},
+		ref
+	) => {
 		return (
 			<S.InputDefault customCss={customCss}>
 				<S.Label htmlFor={id}>{label}</S.Label>
 				<S.Wrapper>
-					{SvgComponent && <SvgComponent role="img" />}
+					{prepend}
+					{children}
 					<S.Input
 						id={id}
 						name={name}
@@ -19,6 +36,7 @@ const InputDefault = forwardRef(
 						value={value}
 						{...inputProps}
 					/>
+					{append}
 				</S.Wrapper>
 			</S.InputDefault>
 		);
@@ -26,21 +44,27 @@ const InputDefault = forwardRef(
 );
 
 InputDefault.propTypes = {
-	customCss: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ styles: PropTypes.string })]),
-	id: PropTypes.string.isRequired,
-	label: PropTypes.string,
-	name: PropTypes.string.isRequired,
-	onChange: PropTypes.func,
-	SvgComponent: PropTypes.oneOfType([PropTypes.shape({ type: PropTypes.func }), PropTypes.elementType]),
-	type: PropTypes.string,
-	value: PropTypes.string
+	append: oneOfType([string, element]),
+	children: childrenType,
+	customCss: customCssType,
+	fakeInput: bool,
+	id: string.isRequired,
+	label: string,
+	name: string.isRequired,
+	onChange: func,
+	prepend: oneOfType([string, element]),
+	type: string,
+	value: string
 };
 
 InputDefault.defaultProps = {
+	append: undefined,
+	children: undefined,
 	customCss: undefined,
+	fakeInput: false,
 	label: undefined,
 	onChange: undefined,
-	SvgComponent: undefined,
+	prepend: undefined,
 	type: 'text',
 	value: undefined
 };

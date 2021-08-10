@@ -90,13 +90,6 @@ const bodyStyles = theme => css`
 		font-weight: bold;
 	}
 
-	hr {
-		border: none;
-		border-top: 1px solid ${theme.colors.hr};
-		clear: both;
-		margin-bottom: 1.25rem;
-	}
-
 	:focus:not(:focus-visible) {
 		outline: none;
 	}

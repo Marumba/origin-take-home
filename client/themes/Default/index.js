@@ -3,10 +3,6 @@ const typography = {
 		primary: "'Work Sans', sans-serif;",
 		secondary: "'Rubik', sans-serif;"
 	},
-	sizes: {
-		lg: '24px',
-		xs: '20px'
-	},
 	urls: [
 		'https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Work+Sans:wght@400;600&display=swap'
 	],
@@ -18,6 +14,13 @@ const typography = {
 		secondary: {
 			regular: 500
 		}
+	}
+};
+
+const animations = {
+	durations: {
+		fastest: '100ms',
+		fast: '200ms'
 	}
 };
 
@@ -40,14 +43,14 @@ const colors = {
 	blueGray900: '#1E2A32',
 	brandColorPrimary: '#1B31A8',
 	brandColorSecondary: '#0079FF',
-	hr: '#F4F8FA',
-	htmlBackground: '#E5E5E5',
+	htmlBackground: '#F4F8FA',
 	neutralWhite: '#FFFFFF',
 	primaryText: '#708797'
 };
 
 export default {
 	name: 'Default',
+	animations,
 	colors,
 	medias,
 	typography

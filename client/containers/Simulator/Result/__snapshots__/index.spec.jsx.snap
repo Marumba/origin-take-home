@@ -14,6 +14,13 @@ exports[`Container Simulator Result should render without any props given 1`] = 
   align-items: center;
 }
 
+@media screen and (min-width: 992px) {
+  .emotion-0 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 .emotion-2 {
   font-family: 'Rubik',sans-serif;
   font-weight: 500;
@@ -36,7 +43,7 @@ exports[`Container Simulator Result should render without any props given 1`] = 
   <div
     class="highEmphasis emotion-2 emotion-3"
   >
-    123213
+    $0
   </div>
 </div>
 `;

@@ -10,6 +10,13 @@ exports[`Container Simulator ResultExplained should render without any props giv
   background: #F4F8FA;
 }
 
+@media screen and (min-width: 992px) {
+  .emotion-0 {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
 .emotion-0.highEmphasis {
   color: #1E2A32;
 }
@@ -18,14 +25,10 @@ exports[`Container Simulator ResultExplained should render without any props giv
   font-weight: 600;
 }
 
-<p
-  class="emotion-0 emotion-1"
+<div
+  class="highEmphasis emotion-0 emotion-1"
   data-testid="simulator-result-explained"
 >
-  Testing the text 
-  <strong>
-    amount
-  </strong>
-   an the line height
-</p>
+  Test
+</div>
 `;

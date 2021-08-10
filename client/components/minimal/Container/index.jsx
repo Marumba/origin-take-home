@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { childrenType, string } from '~/types';
 
 import * as S from './style';
 
@@ -8,8 +8,8 @@ function Container({ children, as }) {
 }
 
 Container.propTypes = {
-	as: PropTypes.string,
-	children: PropTypes.node.isRequired
+	as: string,
+	children: childrenType.isRequired
 };
 
 Container.defaultProps = {

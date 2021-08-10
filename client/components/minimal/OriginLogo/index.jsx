@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { customCssType, string } from '~/types';
 
 import originLogo from '~/assets/imgs/logos/logo-origin.svg';
 
@@ -20,11 +20,11 @@ function OriginLogo({ alt, customCss, href, title, type }) {
 }
 
 OriginLogo.propTypes = {
-	alt: PropTypes.string,
-	customCss: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ styles: PropTypes.string })]),
-	href: PropTypes.string,
-	title: PropTypes.string,
-	type: PropTypes.string
+	alt: string,
+	customCss: customCssType,
+	href: string,
+	title: string,
+	type: string
 };
 
 OriginLogo.defaultProps = {

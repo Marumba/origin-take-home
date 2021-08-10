@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, customCssType, oneOfType, element } from '~/types';
 
 import * as S from './style';
 
-function Header({ customCss, subtitle, SvgComponent, title }) {
+function Header({ customCss, icon, subtitle, title }) {
 	return (
 		<S.Header data-testid="simulator-header" customCss={customCss}>
-			{SvgComponent && <SvgComponent role="img" />}
+			{icon}
 			<S.TextWrapper>
 				<S.Title className="highEmphasis">{title}</S.Title>
 				<S.Subtitle className="lowEmphasis">{subtitle}</S.Subtitle>
@@ -16,16 +16,16 @@ function Header({ customCss, subtitle, SvgComponent, title }) {
 }
 
 Header.propTypes = {
-	customCss: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ styles: PropTypes.string })]),
-	subtitle: PropTypes.string,
-	SvgComponent: PropTypes.oneOfType([PropTypes.shape({ type: PropTypes.func }), PropTypes.elementType]),
-	title: PropTypes.string
+	customCss: customCssType,
+	icon: oneOfType([string, element]),
+	subtitle: string,
+	title: string
 };
 
 Header.defaultProps = {
 	customCss: undefined,
+	icon: undefined,
 	subtitle: '',
-	SvgComponent: undefined,
 	title: ''
 };
 

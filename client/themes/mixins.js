@@ -4,7 +4,16 @@ export default theme => ({
 	boxShadow: {
 		level4: css`
 			box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
+		`
+	},
+	box: {
+		big: css`
+			border: 1px solid ${theme.colors.blueGray50};
 			border-radius: 8px;
+		`,
+		small: css`
+			border: 1px solid ${theme.colors.blueGray50};
+			border-radius: 4px;
 		`
 	},
 	button: css`
@@ -33,16 +42,12 @@ export default theme => ({
 
 		border-radius: 32px;
 
+		color: ${theme.colors.neutralWhite};
+		font-size: 16px;
+
 		height: 56px;
+		width: 100%;
 		max-width: 320px;
-	`,
-	smallBox: css`
-		border: 1px solid ${theme.colors.blueGray50};
-		border-radius: 4px;
-	`,
-	bigBox: css`
-		border: 1px solid ${theme.colors.blueGray50};
-		border-radius: 8px;
 	`,
 	description: css`
 		font-family: ${theme.typography.families.primary};
@@ -78,7 +83,9 @@ export default theme => ({
 			color: ${theme.colors.brandColorSecondary};
 		}
 	`,
-	pageContainer: css``,
+	pageContainer: css`
+		padding-bottom: 63px;
+	`,
 	paragraph: css`
 		font-family: ${theme.typography.families.primary};
 		font-weight: ${theme.typography.weights.primary.regular};
@@ -89,8 +96,13 @@ export default theme => ({
 			font-size: 16px;
 		}
 
+		&.semibold,
 		strong {
 			font-weight: ${theme.typography.weights.primary.semibold};
+		}
+
+		&.highEmphasis {
+			color: ${theme.colors.blueGray900};
 		}
 
 		&.lowEmphasis {

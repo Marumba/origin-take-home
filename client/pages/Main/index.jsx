@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Container, Header } from '~/components';
-import { Simulator } from '~/containers';
 
-import { Icons } from '~/helpers/icons';
-
+import HouseSimulation from './partials/houseSimulation';
 import * as S from './style';
 
 function Main() {
@@ -15,10 +13,7 @@ function Main() {
 				<S.MainTitle className="highEmphasis">
 					Let&apos;s plan your <strong>saving goal</strong>.
 				</S.MainTitle>
-				<Simulator.Header title="Buy a house" subtitle="Saving goal" SvgComponent={Icons.Home} />
-				<Simulator.Amount label="Total amount" />
-				<Simulator.Result title="Monthly amount" />
-				<Simulator.ResultExplained />
+				<HouseSimulation />
 			</Container>
 		</S.MainContainer>
 	);

@@ -16,6 +16,7 @@ exports[`Container Simulator Amount should render without any props given 1`] = 
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
+  margin-bottom: 4px;
   color: #1E2A32;
 }
 
@@ -37,10 +38,13 @@ exports[`Container Simulator Amount should render without any props given 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  min-height: 56px;
+  position: relative;
+  padding: 0 14px;
 }
 
-.emotion-6 svg {
-  padding-left: 13px;
+.emotion-6 svg+input {
+  padding-left: 7px;
 }
 
 .emotion-8 {
@@ -49,7 +53,7 @@ exports[`Container Simulator Amount should render without any props given 1`] = 
   font-size: 20px;
   line-height: 120%;
   color: #4D6475;
-  padding: 14px 7px;
+  padding: 14px 0;
   width: 100%;
 }
 
@@ -72,23 +76,20 @@ exports[`Container Simulator Amount should render without any props given 1`] = 
   >
     <label
       class="emotion-4 emotion-5"
-      for="amount"
+      for="needed"
     />
     <div
       class="emotion-6 emotion-7"
     >
-      <div
-        role="img"
-      />
+      <div />
       <input
         class="emotion-8 emotion-9"
-        id="amount"
-        name="amount"
+        id="needed"
+        name="needed"
         type="text"
         value="0.00"
       />
     </div>
   </div>
-  ;
 </div>
 `;

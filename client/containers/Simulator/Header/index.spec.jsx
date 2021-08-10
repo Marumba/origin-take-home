@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render, screen } from '~/helpers/testing.customRtl';
 
-import { ReactComponent as OriginLogo } from '~/assets/imgs/logos/logo-origin.svg';
+import { Icons } from '~/helpers/icons';
 
 import Header from '.';
 
@@ -22,12 +22,14 @@ describe('Container Simulator Header', () => {
 		rerender(<Header subtitle="Subtitle" />);
 		expect(screen.getByText('Subtitle')).toBeInTheDocument();
 
-		rerender(<Header SvgComponent={OriginLogo} />);
+		rerender(<Header icon={<Icons.Home role="img" />} />);
 		expect(screen.getByRole('img')).toBeInTheDocument();
 	});
 
 	it('should display all', () => {
-		const { container } = render(<Header subtitle="Subtitle" title="Title" SvgComponent={OriginLogo} />);
+		const { container } = render(
+			<Header subtitle="Subtitle" title="Title" icon={<Icons.Home role="img" />} />
+		);
 		expect(screen.getByText('Title')).toBeInTheDocument();
 		expect(screen.getByText('Subtitle')).toBeInTheDocument();
 		expect(screen.getByRole('img')).toBeInTheDocument();

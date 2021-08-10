@@ -16,6 +16,7 @@ exports[`Input Text should render with the required prop values 1`] = `
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
+  margin-bottom: 4px;
   color: #1E2A32;
 }
 
@@ -37,10 +38,13 @@ exports[`Input Text should render with the required prop values 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  min-height: 56px;
+  position: relative;
+  padding: 0 14px;
 }
 
-.emotion-4 svg {
-  padding-left: 13px;
+.emotion-4 svg+input {
+  padding-left: 7px;
 }
 
 .emotion-6 {
@@ -49,7 +53,7 @@ exports[`Input Text should render with the required prop values 1`] = `
   font-size: 20px;
   line-height: 120%;
   color: #4D6475;
-  padding: 14px 7px;
+  padding: 14px 0;
   width: 100%;
 }
 
