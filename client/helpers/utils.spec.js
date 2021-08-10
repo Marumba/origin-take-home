@@ -6,12 +6,9 @@ describe('Utils', () => {
 	describe('formatCurrency', () => {
 		it('should format number to USD currency format', () => {
 			const num = 123;
+			expect(fn.formatCurrency()).toBe('0');
 			expect(fn.formatCurrency(num, CURRENCY_CONFIG.USD.locale, CURRENCY_CONFIG.USD.options)).toBe('$123.00');
-		});
-		it('should not work without locale or value', () => {
-			const num = 123;
 			expect(fn.formatCurrency(num)).toBe('123');
-			expect(fn.formatCurrency()).toBe('NaN');
 		});
 	});
 	describe('sanitizeNumber', () => {
@@ -19,12 +16,18 @@ describe('Utils', () => {
 			expect(fn.sanitizeNumber()).toBe(undefined);
 			expect(fn.sanitizeNumber(123)).toBe(123);
 			expect(fn.sanitizeNumber('ad123ed')).toBe(123);
+			expect(fn.sanitizeNumber('ad123ed-')).toBe(123);
+		});
+		it('should return NaN if uncoveredCharacter is specified', () => {
+			expect(fn.sanitizeNumber('ad123ed-', '-')).toBe(NaN);
 		});
 	});
 	describe('fractionateValue', () => {
 		it('should return the maximum fraction decimals from the number given', () => {
 			expect(fn.fractionateValue()).toBe(undefined);
 			expect(fn.fractionateValue(123)).toBe(123);
+			expect(fn.fractionateValue(123, 2)).toBe(123);
+			expect(fn.fractionateValue('12312-', 2)).toBe(123.12);
 			expect(fn.fractionateValue(1.2312312, 2)).toBe(1.23);
 			expect(fn.fractionateValue('1.2312312', 2)).toBe(123123.12);
 		});

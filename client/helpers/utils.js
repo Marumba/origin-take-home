@@ -1,21 +1,22 @@
-export function formatCurrency(value, locale, options) {
+export function formatCurrency(value = 0, locale, options) {
 	const formatter = new Intl.NumberFormat(locale, options);
 	return formatter.format(value);
 }
 
-export function sanitizeNumber(number) {
+export function sanitizeNumber(number, uncoveredCharacter = '') {
 	if (typeof number === 'number' || !number) return number;
-	return Number(number.toString().replace(/[^0-9-]/g, ''));
+	const regex = new RegExp(`[^0-9${uncoveredCharacter}]`, 'g');
+	return Number(number.toString().replace(regex, ''));
 }
 
-export function fractionateValue(value, maximumFractionDigits) {
+export function fractionateValue(value, maximumFractionDigits, uncoveredCharacter) {
 	if (!value || !maximumFractionDigits) return value;
 	const fractionReason = 10 ** maximumFractionDigits;
 
 	let saferValue = value;
 
 	if (typeof saferValue === 'string') {
-		saferValue = sanitizeNumber(value);
+		saferValue = sanitizeNumber(value, uncoveredCharacter);
 
 		if (saferValue % 1 !== 0) {
 			saferValue = saferValue.toFixed(maximumFractionDigits);
@@ -26,7 +27,7 @@ export function fractionateValue(value, maximumFractionDigits) {
 			: value.toFixed(maximumFractionDigits);
 	}
 
-	return sanitizeNumber(saferValue) / fractionReason;
+	return sanitizeNumber(saferValue, uncoveredCharacter) / fractionReason;
 }
 
 export function getYearMonthDatetime(date = new Date()) {

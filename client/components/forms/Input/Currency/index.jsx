@@ -69,7 +69,7 @@ const InputCurrency = React.forwardRef(
 					locale,
 					options: { maximumFractionDigits, minimumFractionDigits }
 				} = finalConfig;
-				const normalizedValue = fractionateValue(inputValue, maximumFractionDigits);
+				const normalizedValue = fractionateValue(inputValue, maximumFractionDigits, '-');
 				const normalizecMaskedValue = formatCurrency(normalizedValue, locale, {
 					maximumFractionDigits,
 					minimumFractionDigits
