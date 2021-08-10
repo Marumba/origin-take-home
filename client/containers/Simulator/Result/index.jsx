@@ -19,12 +19,13 @@ function Result({ title, customCss }) {
 		monthlyAmount,
 		CURRENCY_CONFIG.USD.locale,
 		CURRENCY_CONFIG.USD.options
-	).replace('.00', '');
+	);
+	const withoutDoubleZero = monthlyAmountFormatted && monthlyAmountFormatted.replace('.00', '');
 
 	return (
 		<S.Result data-testid="simulator-result" customCss={customCss}>
 			{title && <S.Title>{title}</S.Title>}
-			<S.ResultValue className="highEmphasis">{monthlyAmountFormatted}</S.ResultValue>
+			<S.ResultValue className="highEmphasis">{withoutDoubleZero}</S.ResultValue>
 		</S.Result>
 	);
 }

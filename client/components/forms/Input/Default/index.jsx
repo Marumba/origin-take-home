@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { bool, oneOfType, element, string, func, childrenType, customCssType } from '~/types';
+import { bool, oneOfType, element, string, func, childrenType, customCssType, stringOrNumber } from '~/types';
 
 import * as S from './style';
 
@@ -54,7 +54,7 @@ InputDefault.propTypes = {
 	onChange: func,
 	prepend: oneOfType([string, element]),
 	type: string,
-	value: string
+	value: stringOrNumber
 };
 
 InputDefault.defaultProps = {

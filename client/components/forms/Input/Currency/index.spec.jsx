@@ -6,7 +6,6 @@ import { render, screen } from '~/helpers/testing.customRtl';
 import InputCurrency from './';
 
 describe('Input Text', () => {
-	const initialValue = '0.00';
 	const defaultPropValue = '250000';
 	const defaultPropValueFormatted = '2,500.00';
 
@@ -18,17 +17,17 @@ describe('Input Text', () => {
 	it('should allow only numbers', () => {
 		render(<InputCurrency id="needed" name="needed" />);
 
-		userEvent.type(screen.getByDisplayValue(initialValue), 'Not a number');
-		expect(screen.getByDisplayValue(initialValue)).toBeInTheDocument();
+		userEvent.type(screen.getByRole('textbox'), 'Not a number');
+		expect(screen.getByRole('textbox')).toBeInTheDocument();
 
-		userEvent.type(screen.getByDisplayValue(initialValue), 'some 456 number');
+		userEvent.type(screen.getByRole('textbox'), 'some 456 number');
 		expect(screen.getByDisplayValue('4.56')).toBeInTheDocument();
 	});
 
 	it('should display the value formatted as US currency', () => {
 		render(<InputCurrency id="needed" name="needed" />);
 
-		userEvent.type(screen.getByDisplayValue(initialValue), '1234567890');
+		userEvent.type(screen.getByRole('textbox'), '1234567890');
 		expect(screen.getByDisplayValue('12,345,678.90')).toBeInTheDocument();
 	});
 
@@ -39,9 +38,9 @@ describe('Input Text', () => {
 
 	it('should respect the maximum decimal places by removing the frist number and keeping the last one', () => {
 		render(<InputCurrency id="needed" name="needed" maxDecimalPlaces="5" />);
-		expect(screen.getByDisplayValue(initialValue)).toBeInTheDocument();
+		expect(screen.getByRole('textbox')).toBeInTheDocument();
 
-		userEvent.type(screen.getByDisplayValue(initialValue), '12345678910');
+		userEvent.type(screen.getByRole('textbox'), '12345678910');
 		expect(screen.getByDisplayValue('56,789.10')).toBeInTheDocument();
 	});
 
@@ -50,7 +49,7 @@ describe('Input Text', () => {
 		expect(screen.getByDisplayValue(defaultPropValueFormatted)).toBeInTheDocument();
 
 		userEvent.type(screen.getByDisplayValue(defaultPropValueFormatted), '-');
-		expect(screen.getByDisplayValue(initialValue)).toBeInTheDocument();
+		expect(screen.getByRole('textbox')).toBeInTheDocument();
 	});
 
 	it('should use blur and focus status if available', () => {

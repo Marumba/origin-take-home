@@ -87,7 +87,7 @@ const InputCurrency = React.forwardRef(
 		const updateValues = useCallback(
 			newValue => {
 				const [calculatedValue, calculatedMaskedValue] = calculateValues(newValue);
-				const lengthWithoutDigits = calculatedValue.toFixed(0).length;
+				const lengthWithoutDigits = (calculatedValue && calculatedValue.toFixed(0).length) || 0;
 
 				if (!maxDecimalPlaces || lengthWithoutDigits <= maxDecimalPlaces) {
 					setMaskedValue(calculatedMaskedValue);

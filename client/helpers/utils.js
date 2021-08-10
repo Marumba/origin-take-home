@@ -4,11 +4,12 @@ export function formatCurrency(value, locale, options) {
 }
 
 export function sanitizeNumber(number) {
-	if (typeof number === 'number') return number;
+	if (typeof number === 'number' || !number) return number;
 	return Number(number.toString().replace(/[^0-9-]/g, ''));
 }
 
 export function fractionateValue(value, maximumFractionDigits) {
+	if (!value || !maximumFractionDigits) return value;
 	const fractionReason = 10 ** maximumFractionDigits;
 
 	let saferValue = value;
