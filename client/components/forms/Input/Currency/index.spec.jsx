@@ -10,8 +10,11 @@ describe('Input Text', () => {
 	const defaultPropValueFormatted = '2,500.00';
 
 	it('should display the default value of the currency field 0.00', () => {
-		render(<InputCurrency id="needed" name="needed" />);
-		expect(screen.getByRole('textbox')).toBeInTheDocument();
+		const { rerender } = render(<InputCurrency id="needed" name="needed" />);
+		expect(screen.getByDisplayValue('0.00')).toBeInTheDocument();
+
+		rerender(<InputCurrency id="needed" name="needed" maxFractionDigits="0" />);
+		expect(screen.getByDisplayValue('0')).toBeInTheDocument();
 	});
 
 	it('should allow only numbers', () => {
