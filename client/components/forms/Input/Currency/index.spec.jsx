@@ -21,7 +21,7 @@ describe('Input Text', () => {
 		render(<InputCurrency id="needed" name="needed" />);
 
 		userEvent.type(screen.getByRole('textbox'), 'Not a number');
-		expect(screen.getByRole('textbox')).toBeInTheDocument();
+		expect(screen.getByDisplayValue('0.00')).toBeInTheDocument();
 
 		userEvent.type(screen.getByRole('textbox'), 'some 456 number');
 		expect(screen.getByDisplayValue('4.56')).toBeInTheDocument();
