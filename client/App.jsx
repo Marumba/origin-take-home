@@ -2,16 +2,16 @@ import React from 'react';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider, Global } from '@emotion/react';
 
-import theme, { globalStyle } from '~/themes';
+import Routes from './routes';
 
-import Main from './pages/Main';
+import theme, { globalStyle } from '~/themes';
 
 function App() {
 	return (
 		<RecoilRoot>
 			<ThemeProvider theme={theme}>
 				<Global styles={currentTheme => globalStyle(currentTheme)} />
-				<Main />
+				<Routes />
 			</ThemeProvider>
 		</RecoilRoot>
 	);
