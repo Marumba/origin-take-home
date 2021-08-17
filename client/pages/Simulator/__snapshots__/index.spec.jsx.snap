@@ -832,12 +832,12 @@ exports[`Main should render the main page 1`] = `
           </p>
         </div>
       </div>
-      <button
+      <a
         class="emotion-66 emotion-67"
+        href="/"
+        styletype="cta"
         type="button"
-      >
-        Confirm
-      </button>
+      />
     </div>
   </main>
 </div>

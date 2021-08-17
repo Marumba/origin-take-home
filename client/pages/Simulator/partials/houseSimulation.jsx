@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Button, Card } from '~/components';
+import { Card } from '~/components';
 
 import { Simulator } from '~/containers';
 
@@ -33,7 +34,9 @@ function HouseSimulation() {
 					)}
 				</Simulator.ResultExplained>
 			</S.SimulatorResultHolder>
-			<Button styleType="cta">Confirm</Button>
+			<Simulator.CtaButton as={Link} to="/" styleType="cta">
+				Confirm
+			</Simulator.CtaButton>
 		</Card>
 	);
 }

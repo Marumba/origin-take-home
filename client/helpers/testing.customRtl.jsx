@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 import { render as rtlRender } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
@@ -10,7 +11,9 @@ function render(ui, { ...renderOptions } = {}) {
 	function Wrapper({ children }) {
 		return (
 			<RecoilRoot>
-				<ThemeProvider theme={theme}>{children}</ThemeProvider>
+				<MemoryRouter>
+					<ThemeProvider theme={theme}>{children}</ThemeProvider>
+				</MemoryRouter>
 			</RecoilRoot>
 		);
 	}

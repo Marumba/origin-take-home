@@ -1,5 +1,5 @@
 import React from 'react';
-import { childrenType, customCssType, func, string } from '~/types';
+import { childrenType, customCssType, func, string, oneOfType, elementType } from '~/types';
 
 import * as S from './style';
 
@@ -19,7 +19,7 @@ function Button({ as, customCss, children, onClick, type, styleType, ...buttonPr
 }
 
 Button.propTypes = {
-	as: string,
+	as: oneOfType([string, elementType]),
 	children: childrenType,
 	customCss: customCssType,
 	onClick: func,
