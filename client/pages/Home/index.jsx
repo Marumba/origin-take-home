@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Container } from '~/components';
+
 import Card from '~/components/minimal/Card';
 
 import * as S from './style';
@@ -9,10 +11,10 @@ const Home = () => {
 
 	return (
 		<S.Home>
-			<S.Wrapper>
-				<S.Title className="highEmphasis">Here are your savings goals!</S.Title>
-				{renderComponents}
-			</S.Wrapper>
+			<Container as="main" customCss={theme => S.customContainerCss(theme)}>
+				<S.Title>Here are your savings goals!</S.Title>
+				<S.Wrapper>{renderComponents}</S.Wrapper>
+			</Container>
 		</S.Home>
 	);
 };

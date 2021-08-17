@@ -6,53 +6,11 @@ exports[`Main should render the main page 1`] = `
 }
 
 .emotion-2 {
-  background: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  -webkit-justify-content: left;
-  justify-content: left;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 12px;
-  -webkit-transition: padding 100ms ease-in;
-  transition: padding 100ms ease-in;
-}
-
-@media screen and (min-width: 992px) {
-  .emotion-2 {
-    padding: 24px;
-  }
-}
-
-.emotion-4 {
-  display: block;
-}
-
-.emotion-6 {
-  display: block;
-  height: 24px;
-  -webkit-transition: height 100ms ease-in;
-  transition: height 100ms ease-in;
-}
-
-@media screen and (min-width: 992px) {
-  .emotion-6 {
-    height: 32px;
-  }
-}
-
-.emotion-8 {
   display: block;
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-4 {
   color: #1E2A32;
   font-family: 'Work Sans',sans-serif;
   font-weight: normal;
@@ -63,26 +21,26 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-10 {
+  .emotion-4 {
     font-size: 20px;
   }
 }
 
-.emotion-10 strong {
+.emotion-4 strong {
   font-weight: 600;
 }
 
-.emotion-10.highEmphasis {
+.emotion-4.highEmphasis {
   color: #1B31A8;
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-10 {
+  .emotion-4 {
     margin-top: 48px;
   }
 }
 
-.emotion-12 {
+.emotion-6 {
   background: #FFFFFF;
   border-radius: 8px;
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
@@ -92,7 +50,7 @@ exports[`Main should render the main page 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-14 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,11 +62,11 @@ exports[`Main should render the main page 1`] = `
   justtify-content: left;
 }
 
-.emotion-14 svg {
+.emotion-8 svg {
   margin-right: 15px;
 }
 
-.emotion-16 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,7 +84,7 @@ exports[`Main should render the main page 1`] = `
   flex-direction: column;
 }
 
-.emotion-18 {
+.emotion-12 {
   font-family: 'Rubik',sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -135,16 +93,16 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-18 {
+  .emotion-12 {
     font-size: 24px;
   }
 }
 
-.emotion-18.highEmphasis {
+.emotion-12.highEmphasis {
   color: #1E2A32;
 }
 
-.emotion-20 {
+.emotion-14 {
   font-family: 'Work Sans',sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -153,46 +111,46 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-20 {
+  .emotion-14 {
     font-size: 16px;
   }
 }
 
-.emotion-20.semibold,
-.emotion-20 strong {
+.emotion-14.semibold,
+.emotion-14 strong {
   font-weight: 600;
 }
 
-.emotion-20.highEmphasis {
+.emotion-14.highEmphasis {
   color: #1E2A32;
 }
 
-.emotion-20.lowEmphasis {
+.emotion-14.lowEmphasis {
   color: #708797;
 }
 
-.emotion-22 {
+.emotion-16 {
   margin: 24px 0;
 }
 
-.emotion-22>div+div {
+.emotion-16>div+div {
   margin-top: 16px;
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-22 {
+  .emotion-16 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .emotion-22>div+div {
+  .emotion-16>div+div {
     margin-top: 0;
     min-width: 192px;
   }
 
-  .emotion-22>div:first-of-type {
+  .emotion-16>div:first-of-type {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -200,7 +158,7 @@ exports[`Main should render the main page 1`] = `
   }
 }
 
-.emotion-26 {
+.emotion-20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +168,7 @@ exports[`Main should render the main page 1`] = `
   flex-direction: column;
 }
 
-.emotion-28 {
+.emotion-22 {
   font-family: 'Work Sans',sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -220,12 +178,12 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-28 {
+  .emotion-22 {
     font-size: 14px;
   }
 }
 
-.emotion-30 {
+.emotion-24 {
   border: 1px solid #E9EEF2;
   border-radius: 4px;
   background: #fff;
@@ -242,11 +200,11 @@ exports[`Main should render the main page 1`] = `
   padding: 0 14px;
 }
 
-.emotion-30 svg+input {
+.emotion-24 svg+input {
   padding-left: 7px;
 }
 
-.emotion-32 {
+.emotion-26 {
   font-family: 'Rubik',sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -257,20 +215,20 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-32 {
+  .emotion-26 {
     font-size: 24px;
   }
 }
 
-.emotion-32.highEmphasis {
+.emotion-26.highEmphasis {
   color: #1E2A32;
 }
 
-.emotion-36:focus {
+.emotion-30:focus {
   background: red;
 }
 
-.emotion-38 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -280,7 +238,7 @@ exports[`Main should render the main page 1`] = `
   flex-direction: column;
 }
 
-.emotion-38 input {
+.emotion-32 input {
   width: auto;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -291,7 +249,7 @@ exports[`Main should render the main page 1`] = `
   z-index: 1;
 }
 
-.emotion-44 {
+.emotion-38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -315,15 +273,15 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-44 {
+  .emotion-38 {
     padding: 0;
   }
 
-  .emotion-44 svg {
+  .emotion-38 svg {
     margin-left: 12px;
   }
 
-  .emotion-44:hover svg {
+  .emotion-38:hover svg {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -331,7 +289,7 @@ exports[`Main should render the main page 1`] = `
   }
 }
 
-.emotion-44:active svg {
+.emotion-38:active svg {
   -webkit-transform: scale(1.4);
   -moz-transform: scale(1.4);
   -ms-transform: scale(1.4);
@@ -340,7 +298,7 @@ exports[`Main should render the main page 1`] = `
   transition: 0.1s;
 }
 
-.emotion-46 {
+.emotion-40 {
   border: 1px solid #E9EEF2;
   border-radius: 4px;
   background: #fff;
@@ -368,67 +326,67 @@ exports[`Main should render the main page 1`] = `
   z-index: 5;
 }
 
+.emotion-42 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-42 {
+    font-size: 16px;
+  }
+}
+
+.emotion-42.semibold,
+.emotion-42 strong {
+  font-weight: 600;
+}
+
+.emotion-42.highEmphasis {
+  color: #1E2A32;
+}
+
+.emotion-42.lowEmphasis {
+  color: #708797;
+}
+
+.emotion-44 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Work Sans',sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 992px) {
+  .emotion-44 {
+    font-size: 16px;
+  }
+}
+
+.emotion-44.semibold,
+.emotion-44 strong {
+  font-weight: 600;
+}
+
+.emotion-44.highEmphasis {
+  color: #1E2A32;
+}
+
+.emotion-44.lowEmphasis {
+  color: #708797;
+}
+
 .emotion-48 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: 'Work Sans',sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-}
-
-@media screen and (min-width: 992px) {
-  .emotion-48 {
-    font-size: 16px;
-  }
-}
-
-.emotion-48.semibold,
-.emotion-48 strong {
-  font-weight: 600;
-}
-
-.emotion-48.highEmphasis {
-  color: #1E2A32;
-}
-
-.emotion-48.lowEmphasis {
-  color: #708797;
-}
-
-.emotion-50 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-family: 'Work Sans',sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-}
-
-@media screen and (min-width: 992px) {
-  .emotion-50 {
-    font-size: 16px;
-  }
-}
-
-.emotion-50.semibold,
-.emotion-50 strong {
-  font-weight: 600;
-}
-
-.emotion-50.highEmphasis {
-  color: #1E2A32;
-}
-
-.emotion-50.lowEmphasis {
-  color: #708797;
-}
-
-.emotion-54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -456,15 +414,15 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-54 {
+  .emotion-48 {
     padding: 0;
   }
 
-  .emotion-54 svg {
+  .emotion-48 svg {
     margin-left: 12px;
   }
 
-  .emotion-54:hover svg {
+  .emotion-48:hover svg {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -472,7 +430,7 @@ exports[`Main should render the main page 1`] = `
   }
 }
 
-.emotion-54:active svg {
+.emotion-48:active svg {
   -webkit-transform: scale(1.4);
   -moz-transform: scale(1.4);
   -ms-transform: scale(1.4);
@@ -482,12 +440,12 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-54 svg {
+  .emotion-48 svg {
     margin-left: 0;
     margin-right: 12px;
   }
 
-  .emotion-54:hover svg {
+  .emotion-48:hover svg {
     -webkit-transform: rotate(180deg) scale(1.2);
     -moz-transform: rotate(180deg) scale(1.2);
     -ms-transform: rotate(180deg) scale(1.2);
@@ -495,24 +453,24 @@ exports[`Main should render the main page 1`] = `
   }
 }
 
-.emotion-54:active svg {
+.emotion-48:active svg {
   -webkit-transform: rotate(180deg) scale(1.4);
   -moz-transform: rotate(180deg) scale(1.4);
   -ms-transform: rotate(180deg) scale(1.4);
   transform: rotate(180deg) scale(1.4);
 }
 
-.emotion-56 {
+.emotion-50 {
   border: 1px solid #E9EEF2;
   border-radius: 8px;
   margin-bottom: 32px;
 }
 
-.emotion-56>* {
+.emotion-50>* {
   border-radius: 8px;
 }
 
-.emotion-56>*:last-child {
+.emotion-50>*:last-child {
   border-radius: 0 0 8px 8px;
   min-height: 80px;
   display: -webkit-box;
@@ -525,7 +483,7 @@ exports[`Main should render the main page 1`] = `
   align-items: center;
 }
 
-.emotion-58 {
+.emotion-52 {
   padding: 24px;
   background: #fff;
   display: -webkit-box;
@@ -539,13 +497,13 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-58 {
+  .emotion-52 {
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 
-.emotion-60 {
+.emotion-54 {
   color: #1E2A32;
   font-family: 'Work Sans',sans-serif;
   font-weight: normal;
@@ -559,20 +517,20 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-60 {
+  .emotion-54 {
     font-size: 20px;
   }
 }
 
-.emotion-60 strong {
+.emotion-54 strong {
   font-weight: 600;
 }
 
-.emotion-60.highEmphasis {
+.emotion-54.highEmphasis {
   color: #1B31A8;
 }
 
-.emotion-62 {
+.emotion-56 {
   font-family: 'Rubik',sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -583,11 +541,11 @@ exports[`Main should render the main page 1`] = `
   flex: 1;
 }
 
-.emotion-62.highEmphasis {
+.emotion-56.highEmphasis {
   color: #0079FF;
 }
 
-.emotion-64 {
+.emotion-58 {
   padding: 24px;
   font-family: 'Work Sans',sans-serif;
   font-weight: 400;
@@ -597,21 +555,21 @@ exports[`Main should render the main page 1`] = `
 }
 
 @media screen and (min-width: 992px) {
-  .emotion-64 {
+  .emotion-58 {
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 
-.emotion-64.highEmphasis {
+.emotion-58.highEmphasis {
   color: #1E2A32;
 }
 
-.emotion-64 strong {
+.emotion-58 strong {
   font-weight: 600;
 }
 
-.emotion-66 {
+.emotion-60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -636,7 +594,7 @@ exports[`Main should render the main page 1`] = `
   max-width: 320px;
 }
 
-.emotion-66:hover {
+.emotion-60:hover {
   border: 2px solid #000;
   background-color: #000;
   box-shadow: 3px 3px 11px 0 rgb(1 58 117 / 33%);
@@ -650,26 +608,11 @@ exports[`Main should render the main page 1`] = `
   class="emotion-0 emotion-1"
   data-testid="mainPage"
 >
-  <header
+  <main
     class="emotion-2 emotion-3"
   >
-    <a
-      class="emotion-4 emotion-5"
-      href="/"
-      title="Origin Home"
-    >
-      <img
-        alt="Origin Logo"
-        class="emotion-6 emotion-7"
-        src="SvgrURL"
-      />
-    </a>
-  </header>
-  <main
-    class="emotion-8 emotion-9"
-  >
     <h1
-      class="highEmphasis emotion-10 emotion-11"
+      class="highEmphasis emotion-4 emotion-5"
     >
       Let's plan your 
       <strong>
@@ -678,50 +621,50 @@ exports[`Main should render the main page 1`] = `
       .
     </h1>
     <div
-      class="emotion-12 emotion-13"
+      class="emotion-6 emotion-7"
     >
       <div
-        class="emotion-14 emotion-15"
+        class="emotion-8 emotion-9"
         data-testid="simulator-header"
       >
         <div />
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-10 emotion-11"
         >
           <h2
-            class="highEmphasis emotion-18 emotion-19"
+            class="highEmphasis emotion-12 emotion-13"
           >
             Buy a house
           </h2>
           <h3
-            class="lowEmphasis emotion-20 emotion-21"
+            class="lowEmphasis emotion-14 emotion-15"
           >
             Saving goal
           </h3>
         </div>
       </div>
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-16 emotion-17"
       >
         <div
-          class="emotion-24 emotion-25"
+          class="emotion-18 emotion-19"
           data-testid="simulator-amount"
         >
           <div
-            class="emotion-26 emotion-27"
+            class="emotion-20 emotion-21"
           >
             <label
-              class="emotion-28 emotion-29"
+              class="emotion-22 emotion-23"
               for="amount"
             >
               Total amount
             </label>
             <div
-              class="emotion-30 emotion-31"
+              class="emotion-24 emotion-25"
             >
               <div />
               <input
-                class="emotion-32 emotion-33"
+                class="emotion-26 emotion-27"
                 id="amount"
                 name="amount"
                 type="text"
@@ -731,46 +674,46 @@ exports[`Main should render the main page 1`] = `
           </div>
         </div>
         <div
-          class="emotion-34 emotion-35"
+          class="emotion-28 emotion-29"
           data-testid="simulator-reach-date"
         >
           <div
-            class="emotion-36 emotion-37"
+            class="emotion-30 emotion-31"
           >
             <div
-              class="emotion-38 emotion-27"
+              class="emotion-32 emotion-21"
             >
               <label
-                class="emotion-28 emotion-29"
+                class="emotion-22 emotion-23"
                 for="reachDate"
               >
                 Reach goal by
               </label>
               <div
-                class="emotion-30 emotion-31"
+                class="emotion-24 emotion-25"
               >
                 <button
-                  class="emotion-44 emotion-45"
+                  class="emotion-38 emotion-39"
                   type="button"
                 >
                   <div />
                 </button>
                 <div
-                  class="emotion-46 emotion-47"
+                  class="emotion-40 emotion-41"
                 >
                   <div
-                    class="highEmphasis semibold emotion-48 emotion-49"
+                    class="highEmphasis semibold emotion-42 emotion-43"
                   >
                     September
                   </div>
                   <div
-                    class="highEmphasis emotion-50 emotion-51"
+                    class="highEmphasis emotion-44 emotion-45"
                   >
                     2021
                   </div>
                 </div>
                 <input
-                  class="emotion-32 emotion-33"
+                  class="emotion-26 emotion-27"
                   hidden=""
                   id="reachDate"
                   name="reachDate"
@@ -779,7 +722,7 @@ exports[`Main should render the main page 1`] = `
                   value="2021-9"
                 />
                 <button
-                  class="emotion-54 emotion-55"
+                  class="emotion-48 emotion-49"
                   type="button"
                 >
                   <div
@@ -792,25 +735,25 @@ exports[`Main should render the main page 1`] = `
         </div>
       </div>
       <div
-        class="emotion-56 emotion-57"
+        class="emotion-50 emotion-51"
       >
         <div
-          class="emotion-58 emotion-59"
+          class="emotion-52 emotion-53"
           data-testid="simulator-result"
         >
           <div
-            class="emotion-60 emotion-61"
+            class="emotion-54 emotion-55"
           >
             Monthly amount
           </div>
           <div
-            class="highEmphasis emotion-62 emotion-63"
+            class="highEmphasis emotion-56 emotion-57"
           >
             $0
           </div>
         </div>
         <div
-          class="highEmphasis emotion-64 emotion-65"
+          class="highEmphasis emotion-58 emotion-59"
           data-testid="simulator-result-explained"
         >
           <p>
@@ -833,11 +776,13 @@ exports[`Main should render the main page 1`] = `
         </div>
       </div>
       <a
-        class="emotion-66 emotion-67"
+        class="emotion-60 emotion-61"
         href="/"
         styletype="cta"
         type="button"
-      />
+      >
+        Confirm
+      </a>
     </div>
   </main>
 </div>
